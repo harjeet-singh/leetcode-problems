@@ -13,13 +13,10 @@ class Solution:
             flatten_mat += mat[i]
 
         new_mat = []
-        if r == 1:
-            new_mat = flatten_mat[0:c]
-        else:
-            startIndex = 0
-            for i in range(r):
-                new_mat.append(flatten_mat[startIndex:startIndex + c])
-                startIndex = startIndex + c
+        startIndex = 0
+        for i in range(r):
+            new_mat.append(flatten_mat[startIndex:startIndex + c])
+            startIndex = startIndex + c
 
         return new_mat
 
